@@ -11,9 +11,14 @@ const styles = StyleSheet.create({
   }
 });
 
-const Input = ({ onChange, value }) => {
+const Input = ({ onChange, value, onSubmit }) => {
   return (
-    <TextInput onChangeText={onChange} value={value} style={styles.input} />
+    <TextInput
+      onSubmitEditing={onSubmit}
+      onChangeText={onChange}
+      value={value}
+      style={styles.input}
+    />
   );
 };
 
